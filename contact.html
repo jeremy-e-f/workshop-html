@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style>
+			#form_contact{
+				text-align: center;
+			}
+
+			#form_contact fieldset{
+				max-width: 500px;
+				margin: auto;
+				padding: 20px;
+			}
+
+			#form_contact td{
+				padding-bottom: 20px;
+			}
+
+			#form_contact textarea{
+				width: 500px;
+				height: 50px;
+			}
+
+			#form_contact *[required]{
+				border: #CD5C5C 1px solid;
+			}
+		</style> 
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<form action="/send_contact" method="POST" id="form_contact">
+				<fieldset>
+					<legend>Formulaire de contact:</legend>
+					<table>
+						<tr>
+							<td>
+								<label for="nom_contact">Nom:</label>
+							</td>
+							<td>
+								<input id="nom_contact" name="lastname" type="text" required >
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="prenom_contact">Prénom:</label>
+							</td>
+							<td>
+								<input id="prenom_contact" name="firstname" type="text" required >
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="email_contact">Email:</label>
+							</td>
+							<td>
+								<input id="email_contact" name="email" type="email" required >
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="phone_contact">Tel:</label>
+							</td>
+							<td>
+								<input id="phone_contact" name="tel" type="tel" >
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="canal_contact">Canal de contact préféré:</label>
+							</td>
+							<td>
+								<select id="canal_contact" name="channel" >
+									<option>Email</option>
+									<option>Téléphone</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								Message:<br><br>
+								<textarea name="message" required></textarea>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<br>
+				<input type="submit" name="Envoyer">
+			</form>
+		</main>
+		<footer></footer>
+	</body>
+</html>
